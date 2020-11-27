@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>taco cloud</title>
+</head>
+<body>
+	<img th:src="@{/images/taco-cloud.png}"/>
+	<p th:text="${message}">placeholder message</p>
+	<hr>
+	<div th:each="ingredient: ${wrap}">
+		<input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+		<span th:text="${ingredient.name}">INGREDIENT</span><br/>
+	</div>
+</body>
+</html>
